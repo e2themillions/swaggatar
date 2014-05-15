@@ -1,0 +1,4 @@
+swaggatar
+=========
+
+animated svg gravatars
