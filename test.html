@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html><head>
+
+
+<style>
+svg.anitar {
+	height:300px;
+	width:300px;
+	background-color:#EEE;
+
+}
+</style>
+
+</head>
+
+<body>
+
+	<svg id="swagz" class="anitar">
+<!--		<line id="line1" x1="1" y1="1" x2="100" y2="100" stroke="rgb(0,0,0)" stroke-width="2"/> -->
+	</svg>
+
+</body>
+<a href="javascript:doit();">do it</a>
+
+<script src="https://raw.github.com/wout/svg.js/master/dist/svg.min.js"></script>
+<script>
+function doit() {
+
+
+
+var draw = SVG('swagz');//.size(300, 300);
+
+var durTime = 6000;
+
+var gradient = draw.gradient('linear', function(stop) {
+  stop.at({ offset: 0, color: '#000' })
+  stop.at({ offset: 1, color: '#f00' })
+})
+
+//var lin = draw.line(10,100).attr( {stroke: '#f02'});
+//var polyline = draw.polyline([[0,0], [100,50], [50,100]]).fill('none').stroke({ width: 1 });
+var polyline = draw.polyline([[0,0], [100,50]]).fill('none').stroke({ width: 1, color:gradient });
+polyline.animate(durTime,'<>',1000).plot([[10,10], [0,100]]).loop(); //simple back and forth
+
+var p2 = draw.polyline([[0,0], [5,150]]).fill('none').stroke({ width: 1 });
+p2.animate(durTime,'<>',1000).plot([[10,10], [30,120]]).loop(); //simple back and forth
+
+var p3 = draw.polyline([[100,50], [190,150]]).fill('none').stroke({ width: 1 });
+p3.animate(durTime,'<>',1000).plot([[0,100], [180,120]]).loop(); 
+
+var p4 = draw.polyline([[5,150], [190,150]]).fill('none').stroke({ width: 1 });
+p4.animate(durTime,'<>',1000).plot([[30,120], [180,120]]).loop(); 
+
+//p2.animate(4000,'<>',1000).plot([[10,10], [0,100]]).loop(); //simple back and forth with different timing (not good)
+
+//polyline.animate(durTime,'>',1000).plot([[10,10], [0,100]]).after(function() { this.animate(durTime,'<',2000).plot([[10,10], [200,100]]) }); //advanced animation..
+//polyline.animate(durTime,'>',4000).plot([[0,0], [100,50]]); 
+
+//animate args: duration, ease, delay
+//polyline.animate(durTime,'>',1000).plot([[50,10], [100,50], [50,100], [0,0], [200,50], [250,100], [300,50], [350,50]]);
+//polyline.animate(durTime,'>',1000).plot([[0,0], [100,100], [400,200]]); //, [300,50], [350,50]]);
+
+//lin.animate().attr({x:200});
+
+//var rect = draw.rect(100, 100).attr({ fill: '#f06' });
+//rect.animate().move(150, 150);
+
+//rect.animate(2000, '>', 1000).attr({ fill: '#f03' });
+}
+</script>
+
+</html>
