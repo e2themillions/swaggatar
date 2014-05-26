@@ -74,7 +74,7 @@ evolving.animate(durTime,'<>',1000).plot([[10,10], [0,100]]).after(function() {e
 
 
 	
-	var a = [20,40];
+	var a = [20,40]; //TODO: lav en evolutions-cyklus for a (e.g. a_ev = [[20,40],[50,30],[60,30]] - den vil så loop'e denne cyklus baseret på a_ev[a_ev.length() modulus evolution-nummer])
 	var b = [30,90];
 	function evolve(what,evolution) { //recursion 
 		//manipulate a, b etc..
