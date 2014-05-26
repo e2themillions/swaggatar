@@ -1,8 +1,11 @@
 {
-  "name": "starter-node-angular",
+  "name": "swaggatar",
   "main": "server.js",
   "dependencies": {
     "express": "~3.5.0",
-    "mongoose": "~3.6.13"
+    "mongoose": "~3.6.13",
+    "passport": "latest",
+    "passport-local" : "latest",
+    "bcrypt-nodejs" : "latest" 	
   }
 }
