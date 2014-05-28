@@ -35,10 +35,11 @@ angular.module('appRoutes', [])
 			controller: 'MainController'
 		})
 
-		// auth protected: nerds page that will use the NerdController
+		// auth protected page that will use the MySwagController
 		.when('/myswag', {
 			templateUrl: 'views/myswag.html',
 			controller: 'MySwagController',
+			caseInsensitiveMatch: true,
 			resolve: {
 	          loggedin: checkLoggedin //defined in app.js
 	        }
