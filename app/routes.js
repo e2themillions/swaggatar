@@ -24,7 +24,7 @@ module.exports = function(app, passport) {
 		app.post('/login', passport.authenticate('local-login'), function(req,res) {res.send(req.user);});
 
 		// route to log out 
-		app.post('/logout', function(req, res){ req.logOut(); res.send(200); });
+		app.get('/logout', function(req, res){ req.logout(); res.sendfile('./public/views/index.html'); });
 
 		// route to test if the user is logged in or not 
 		app.get('/loggedin', function(req, res) { res.send(req.isAuthenticated() ? req.user : '0'); });
