@@ -36,9 +36,9 @@ angular.module('appRoutes', [])
 		})
 
 		// auth protected: nerds page that will use the NerdController
-		.when('/nerds', {
-			templateUrl: 'views/nerd.html',
-			controller: 'NerdController',
+		.when('/myswag', {
+			templateUrl: 'views/myswag.html',
+			controller: 'MySwagController',
 			resolve: {
 	          loggedin: checkLoggedin //defined in app.js
 	        }

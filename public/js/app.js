@@ -4,7 +4,7 @@
  * Angular Application (client side)
  **********************************************************************/
 
-angular.module('SwagApp', ['ngRoute', 'appRoutes', 'ui.bootstrap',  'ui.bootstrap.tpls' , 'MainCtrl', 'LoginCtrl', 'NerdCtrl', 'NerdService', 'GeekCtrl', 'GeekService'])
+angular.module('SwagApp', ['ngRoute', 'appRoutes', 'ui.bootstrap',  'ui.bootstrap.tpls' , 'MainCtrl', 'LoginCtrl', 'MySwagCtrl', 'MySwagService', 'GeekCtrl', 'GeekService'])
 		.config(function($routeProvider, $locationProvider, $httpProvider) {
 
 

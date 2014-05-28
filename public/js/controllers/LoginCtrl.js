@@ -31,7 +31,7 @@ angular.module('LoginCtrl', []).controller('LoginController',  function($scope, 
 	    	alert("wow");
 	      // No error: authentication OK
 	      $rootScope.message = 'Authentication successful!';
-	      $location.url('/nerds');
+	      $location.url('/myswag');
 	    })
 	    .error(function(){
 	    	alert("such sadness");
